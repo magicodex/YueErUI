@@ -1,0 +1,31 @@
+{
+  "name": "yueerui",
+  "version": "1.0.0",
+  "description": "组件化封装 HTML 代码片段",
+  "license": "MIT",
+  "author": "mh.z",
+  "keywords": [
+    "html"
+  ],
+  "main": "index.js",
+  "files": [
+    "lib/",
+    "component/",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitee.com/magicodex/YueErUI.git"
+  },
+  "bugs": {
+    "url": "https://gitee.com/magicodex/YueErUI/issues"
+  },
+  "homepage": "https://gitee.com/magicodex/YueErUI#readme"
+}
