@@ -1,6 +1,6 @@
 {
   "name": "yueerui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "组件化封装 HTML 代码片段",
   "license": "MIT",
   "author": "mh.z",
@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitee.com/magicodex/YueErUI.git"
+    "url": "git+https://github.com/magicodex/YueErUI.git"
   },
   "bugs": {
-    "url": "https://gitee.com/magicodex/YueErUI/issues"
+    "url": "https://github.com/magicodex/YueErUI/issues"
   },
-  "homepage": "https://gitee.com/magicodex/YueErUI#readme"
+  "homepage": "https://github.com/magicodex/YueErUI#readme"
 }
