@@ -1,7 +1,7 @@
 "use strict";
 
 var utils = require('../../../lib/utils');
-var resolveResultConstants = require('./resolve-result-constants');
+var resolvedResultConstants = require('./resolved-result-constants');
 
 /**
  * @namespace helper-resolveCustomExpression
@@ -33,39 +33,39 @@ function resolveCustomExpression(expression) {
 
     if (item.startsWith('##')) {
       // UI 名称
-      if (!(resolveResultConstants.UI_NAME in result)) {
+      if (!(resolvedResultConstants.UI_NAME in result)) {
         var value = item.substring(2);
-        result[resolveResultConstants.UI_NAME] = value;
+        result[resolvedResultConstants.UI_NAME] = value;
       }
     } else if (item.startsWith('$$')) {
       // 数据名称
-      if (!(resolveResultConstants.DATA_NAME in result)) {
+      if (!(resolvedResultConstants.DATA_NAME in result)) {
         var value = item.substring(2);
-        result[resolveResultConstants.DATA_NAME] = value;
+        result[resolvedResultConstants.DATA_NAME] = value;
       }
     } else if (item.startsWith('#')) {
       // 标签 id 属性
-      if (!(resolveResultConstants.TAG_ID_ATTR in result)) {
+      if (!(resolvedResultConstants.TAG_ID_ATTR in result)) {
         var value = item.substring(1);
-        result[resolveResultConstants.TAG_ID_ATTR] = value;
+        result[resolvedResultConstants.TAG_ID_ATTR] = value;
       }
     } else if (item.startsWith('$')) {
       // 标签 name 属性
-      if (!(resolveResultConstants.TAG_NAME_ATTR in result)) {
+      if (!(resolvedResultConstants.TAG_NAME_ATTR in result)) {
         var value = item.substring(1);
-        result[resolveResultConstants.TAG_NAME_ATTR] = value;
+        result[resolvedResultConstants.TAG_NAME_ATTR] = value;
       }
     } else if (item.startsWith('@@')) {
       // 组件类型
-      if (!(resolveResultConstants.COMPONENT_TYPE in result)) {
+      if (!(resolvedResultConstants.COMPONENT_TYPE in result)) {
         var value = item.substring(2);
-        result[resolveResultConstants.COMPONENT_TYPE] = value;
+        result[resolvedResultConstants.COMPONENT_TYPE] = value;
       }
     } else if (item.startsWith('@')) {
       // 标签 class 属性
-      if (!(resolveResultConstants.TAG_CLASS_ATTR in result)) {
+      if (!(resolvedResultConstants.TAG_CLASS_ATTR in result)) {
         var value = item.substring(1);
-        result[resolveResultConstants.TAG_CLASS_ATTR] = value;
+        result[resolvedResultConstants.TAG_CLASS_ATTR] = value;
       }
     }
   }

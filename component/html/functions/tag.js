@@ -5,7 +5,7 @@ var constants = require('../../helper/constants');
 var TagRenderConfig = require('../../helper/tag/tag-render-config');
 var TagRenderer = require('../../helper/tag/tag-renderer');
 var resolveCustomArguments = require('../../helper/resolver/resolve-custom-arguments');
-var resolveResultConstants = require('../../helper/resolver/resolve-result-constants');
+var resolvedResultConstants = require('../../helper/resolver/resolved-result-constants');
 
 /**
  * @namespace html-tag
@@ -68,24 +68,24 @@ function createTagRenderConfig(resolvedArgs) {
   var propertyMappings = {}
 
   // UI 名称
-  propertyMappings[resolveResultConstants.UI_NAME] = constants.TAG_ATTR_UI_NAME;
+  propertyMappings[resolvedResultConstants.UI_NAME] = constants.TAG_ATTR_UI_NAME;
   // 数据名称
-  propertyMappings[resolveResultConstants.DATA_NAME] = constants.TAG_ATTR_DATA_NAME;
+  propertyMappings[resolvedResultConstants.DATA_NAME] = constants.TAG_ATTR_DATA_NAME;
   // 组件类型
-  propertyMappings[resolveResultConstants.COMPONENT_TYPE] = constants.TAG_ATTR_COMPONENT_TYPE;
+  propertyMappings[resolvedResultConstants.COMPONENT_TYPE] = constants.TAG_ATTR_COMPONENT_TYPE;
   // 标签 id 属性
-  propertyMappings[resolveResultConstants.TAG_ID_ATTR] = constants.TAG_ATTR_ID;
+  propertyMappings[resolvedResultConstants.TAG_ID_ATTR] = constants.TAG_ATTR_ID;
   // 标签 name 属性
-  propertyMappings[resolveResultConstants.TAG_NAME_ATTR] = constants.TAG_ATTR_NAME;
+  propertyMappings[resolvedResultConstants.TAG_NAME_ATTR] = constants.TAG_ATTR_NAME;
   // 标签 class 属性
-  propertyMappings[resolveResultConstants.TAG_CLASS_ATTR] = constants.TAG_ATTR_CLASS;
+  propertyMappings[resolvedResultConstants.TAG_CLASS_ATTR] = constants.TAG_ATTR_CLASS;
   // 标签内 HTML 内容
-  propertyMappings[resolveResultConstants.INNER_HTML] = constants.COMPONENT_PARAM_INNER_HTML;
+  propertyMappings[resolvedResultConstants.INNER_HTML] = constants.COMPONENT_PARAM_INNER_HTML;
   // 标签内 HTML 内容
-  propertyMappings[resolveResultConstants.INNER_HTML_FN] = constants.COMPONENT_PARAM_INNER_HTML_FN;
+  propertyMappings[resolvedResultConstants.INNER_HTML_FN] = constants.COMPONENT_PARAM_INNER_HTML_FN;
 
   var config = {};
-  var options = resolvedArgs[resolveResultConstants.OPTIONS];
+  var options = resolvedArgs[resolvedResultConstants.OPTIONS];
 
   for (var oldPropertyName in propertyMappings) {
     var propertyValue = resolvedArgs[oldPropertyName];

@@ -2,7 +2,7 @@
 
 var utils = require('../../../lib/utils');
 var resolveCustomExpression = require('./resolve-custom-expression');
-var resolveResultConstants = require('./resolve-result-constants');
+var resolvedResultConstants = require('./resolved-result-constants');
 
 /**
  * @namespace helper-resolveCustomArguments 
@@ -54,9 +54,9 @@ function resolveCustomArguments(args) {
   }
 
   if (utils.isString(innerHtmlOrInnerHtmlFn)) {
-    result[resolveResultConstants.INNER_HTML] = innerHtmlOrInnerHtmlFn;
+    result[resolvedResultConstants.INNER_HTML] = innerHtmlOrInnerHtmlFn;
   } else if (utils.isFunction(innerHtmlOrInnerHtmlFn)) {
-    result[resolveResultConstants.INNER_HTML_FN] = innerHtmlOrInnerHtmlFn;
+    result[resolvedResultConstants.INNER_HTML_FN] = innerHtmlOrInnerHtmlFn;
   }
 
   if (!utils.isNullOrUndefined(expression)) {

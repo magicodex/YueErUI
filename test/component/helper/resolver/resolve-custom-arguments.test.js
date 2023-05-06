@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var resolveCustomArguments = require('../../../../component/helper/resolver/resolve-custom-arguments');
-var resolveResultConstants = require('../../../../component/helper/resolver/resolve-result-constants');
+var resolvedResultConstants = require('../../../../component/helper/resolver/resolved-result-constants');
 
 describe('resolveCustomArguments', function () {
 
@@ -12,8 +12,8 @@ describe('resolveCustomArguments', function () {
 
       assert.equal(actual.view, null);
       assert.equal(actual.tagName, null);
-      assert.equal(actual[resolveResultConstants.UI_NAME], 'btn');
-      assert.equal(actual[resolveResultConstants.INNER_HTML], 'Hello, world!');
+      assert.equal(actual[resolvedResultConstants.UI_NAME], 'btn');
+      assert.equal(actual[resolvedResultConstants.INNER_HTML], 'Hello, world!');
       assert.deepEqual(actual.options, {});
     });
   });

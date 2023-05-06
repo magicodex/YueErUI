@@ -2,17 +2,17 @@
 
 var utils = require('../../../lib/utils');
 var constants = require('../constants');
-var resolveResultConstants = require('./resolve-result-constants');
+var resolvedResultConstants = require('./resolved-result-constants');
 
 /**
- * @namespace helper-resolveResultConverter
+ * @namespace helper-resolvedResultConverter
  */
 
 var converter = {};
 module.exports = converter;
 
 /**
- * @memberof helper-resolveResultConverter
+ * @memberof helper-resolvedResultConverter
  * @description 转换成标签属性
  * @param {object} resolvedResult 
  * @returns {object}
@@ -26,17 +26,17 @@ converter.convertToTagAttributes = function (resolvedResult) {
   var propertyMappings = {};
 
   // UI 名称
-  propertyMappings[resolveResultConstants.UI_NAME] = constants.TAG_ATTR_UI_NAME;
+  propertyMappings[resolvedResultConstants.UI_NAME] = constants.TAG_ATTR_UI_NAME;
   // 数据名称
-  propertyMappings[resolveResultConstants.DATA_NAME] = constants.TAG_ATTR_DATA_NAME;
+  propertyMappings[resolvedResultConstants.DATA_NAME] = constants.TAG_ATTR_DATA_NAME;
   // 组件类型
-  propertyMappings[resolveResultConstants.COMPONENT_TYPE] = constants.TAG_ATTR_COMPONENT_TYPE;
+  propertyMappings[resolvedResultConstants.COMPONENT_TYPE] = constants.TAG_ATTR_COMPONENT_TYPE;
   // 标签 id 属性
-  propertyMappings[resolveResultConstants.TAG_ID_ATTR] = constants.TAG_ATTR_ID;
+  propertyMappings[resolvedResultConstants.TAG_ID_ATTR] = constants.TAG_ATTR_ID;
   // 标签 name 属性
-  propertyMappings[resolveResultConstants.TAG_NAME_ATTR] = constants.TAG_ATTR_NAME;
+  propertyMappings[resolvedResultConstants.TAG_NAME_ATTR] = constants.TAG_ATTR_NAME;
   // 标签 class 属性
-  propertyMappings[resolveResultConstants.TAG_CLASS_ATTR] = constants.TAG_ATTR_CLASS;
+  propertyMappings[resolvedResultConstants.TAG_CLASS_ATTR] = constants.TAG_ATTR_CLASS;
 
   for (var oldPropertyName in propertyMappings) {
     var propertyValue = resolvedResult[oldPropertyName];
