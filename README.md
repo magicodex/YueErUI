@@ -5,14 +5,14 @@
 
 ## 安装依赖
 ```
-npm install yueerui
+npm install yer-ui
 ```
 
 ## 代码示例
 
 ```
-var View = require('yueerui').View;
-var StringWriter = require('yueerui').StringWriter;
+var View = require('yer-ui').View;
+var StringWriter = require('yer-ui').StringWriter;
 
 var view = new View();
 view.appendHead('<title>YueErUI</title>');
